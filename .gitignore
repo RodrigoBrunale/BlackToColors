@@ -1,0 +1,6 @@
+# Ignore everything
+*
+# But not theses files
+!README.md  
+!png_black_replacer.py
+!.gitignore
