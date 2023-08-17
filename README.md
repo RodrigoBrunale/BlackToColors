@@ -34,10 +34,10 @@ Have you ever looked at an image and thought, "I wish the black in this picture 
 1. Place your PNG images in the same directory as the script.
 2. Run the script:
    ```bash
-   python your_script_name.py
+   png_black_replacer.py
    ```
 3. Watch as directories spring into existence, each containing your images transformed with delightful new colors!
-4. If you want to add or modify colors, simply adjust the `COLORS_UPDATED` dictionary in the script. You can even comment out any color if you wish to skip it.
+4. If you want to add or modify colors, simply adjust the `COLORS` dictionary in the script. You can even comment out any color if you wish to skip it.
 
 ## Fun Fact
 
