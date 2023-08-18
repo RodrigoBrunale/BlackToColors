@@ -17,6 +17,8 @@ Have you ever looked at an image and thought, "I wish the black in this picture 
 
 ## Design Choices
 
+5. **Dynamic Image Size Handling**: The script now supports images of any resolution, dynamically adjusting to the size of each image for color transformations.
+
 1. **Why FFmpeg?** We chose FFmpeg because it's a powerful tool for handling multimedia data. It provides a vast array of capabilities, which made it perfect for our image transformation needs.
 2. **Directory Management**: To keep things tidy, the script creates directories for each color transformation. Originals are tucked safely in their own folder, ensuring they remain pristine.
 3. **Flexibility**: We've set up a COLORS dictionary, allowing you to easily add or remove colors as you see fit. This makes customizing the output a breeze.
@@ -29,15 +31,20 @@ Have you ever looked at an image and thought, "I wish the black in this picture 
 - Ensure you have FFmpeg installed. If you haven't, you can get it [here](https://ffmpeg.org/download.html).
 - This script is written in Python. Make sure you have Python installed.
 
+- The script also requires the `Pillow` package. Install it using pip:
+  ```bash
+  pip install Pillow
+  ```
+
 ### Usage
 
-1. Place your PNG images in the same directory as the script.
+1. Place your PNG images in the same directory as the script. Original images will be moved to the `originals` folder and their transparent versions will be placed in the `transparent` folder.
 2. Run the script:
    ```bash
    png_black_replacer.py
    ```
 3. Watch as directories spring into existence, each containing your images transformed with delightful new colors!
-4. If you want to add or modify colors, simply adjust the `COLORS` dictionary in the script. You can even comment out any color if you wish to skip it.
+4. To customize the colors, adjust the `COLORS_UPDATED` dictionary at the top of the script. You can add new colors, modify existing ones, or comment out any color if you wish to skip it. The folder names for the transformed images will reflect the color name and its hexadecimal code.
 
 ## Fun Fact
 
